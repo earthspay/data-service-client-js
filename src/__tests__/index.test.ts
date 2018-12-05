@@ -1,6 +1,6 @@
 const parser = require('parse-json-bignumber')();
 import DataServiceClient from '../index';
-import { AssetPair, Asset } from '@waves/data-entities';
+import { AssetPair, Asset } from '@earths/data-entities';
 
 const fetch = jest.fn(() => Promise.resolve('{"data":[{ "data": 1 }]}'));
 const NODE_URL = 'NODE_URL';
@@ -44,11 +44,11 @@ describe('Asssets endpoint: ', () => {
 describe('Pairs endpoint: ', () => {
   it('fetch is called with correct params#1', async () => {
     const pair1 = new AssetPair(
-      'WAVES' as any,
+      'EARTHS' as any,
       '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS' as any
     );
     const pair2 = new AssetPair(
-      'WAVES' as any,
+      'EARTHS' as any,
       '474jTeYx2r2Va35794tCScAXWJG9hU2HcgxzMowaZUnu' as any
     );
     await client.getPairs(pair1, pair2);
@@ -319,7 +319,7 @@ describe('Long params transforms into POST request', () => {
     const pairs = new Array(300).fill(1).map(
       () =>
         new AssetPair(
-          new Asset({ id: 'WAVES' } as any),
+          new Asset({ id: 'EARTHS' } as any),
           new Asset({
             id: '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS',
           } as any)

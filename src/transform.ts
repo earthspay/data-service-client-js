@@ -1,4 +1,4 @@
-import { Asset, IAssetJSON } from '@waves/data-entities';
+import { Asset, IAssetJSON } from '@earths/data-entities';
 import { ApiTypes } from './types';
 import { id } from './utils';
 const transformer = ({ __type, data, ...rest }) => {

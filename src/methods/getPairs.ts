@@ -1,5 +1,5 @@
 import { TGetPairs, TCreateGetFn, LibOptions, LibRequest } from '../types';
-import { AssetPair } from '@waves/data-entities';
+import { AssetPair } from '@earths/data-entities';
 import { createMethod } from './createMethod';
 import { createRequest } from '../createRequest';
 

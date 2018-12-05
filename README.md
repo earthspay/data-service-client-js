@@ -1,20 +1,20 @@
-# JS Library for Waves data services
+# JS Library for Earths data services
 
 ## Usage
 
 ```typescript
-const DataServiceClient = require('@waves/data-service-client-js').default;
+const DataServiceClient = require('@earths/data-service-client-js').default;
 
 // Initialization
 const client = new DataServiceClient({
-  rootUrl: 'http://api.wavesplatform.com/v0',
+  rootUrl: 'http://api.earths.ga/v0',
   fetch: req => window.fetch(req).then(res => res.text()), // fetch must return string
   parse: str => JSON.parse(str),
 });
 
 // Fetching
 (async () => {
-  const { data } = await client.getAssets('WAVES'); // data: Asset {}
+  const { data } = await client.getAssets('EARTHS'); // data: Asset {}
 })();
 ```
 
@@ -29,17 +29,17 @@ const client = new DataServiceClient({
 - getAssets:
 
 ```typescript
-await client.getAssets('WAVES'); // One { data: Asset }
-await client.getAssets('WAVES', '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS'); // Or many { data: Asset[] }
+await client.getAssets('EARTHS'); // One { data: Asset }
+await client.getAssets('EARTHS', '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS'); // Or many { data: Asset[] }
 ```
 
 - getPairs
 
 ```typescript
-await client.getPairs('WAVES/8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS'); // One { data: {} }
+await client.getPairs('EARTHS/8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS'); // One { data: {} }
 await client.getPairs(
-  'WAVES/8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS',
-  'WAVES/474jTeYx2r2Va35794tCScAXWJG9hU2HcgxzMowaZUnu'
+  'EARTHS/8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS',
+  'EARTHS/474jTeYx2r2Va35794tCScAXWJG9hU2HcgxzMowaZUnu'
 ); // Many { data: Object[] }
 ```
 

@@ -1,4 +1,4 @@
-import { Asset, IAssetJSON, BigNumber, AssetPair } from '@waves/data-entities';
+import { Asset, IAssetJSON, BigNumber, AssetPair } from '@earths/data-entities';
 
 import { AliasesByAddressOptions } from './methods/getAliases';
 
